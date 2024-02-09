@@ -12,3 +12,4 @@ SCOPED_CREDS =  CREDS.with_scopes(SCOPE)
 GSPREAD_CLIENT = gspread.authorize(SCOPED_CREDS)
 SHEET = GSPREAD_CLIENT.open('stock_list')
 
+print("Welcome to Stock Count. Please enter teh number ot items you'd like to include on your cycle count")
