@@ -19,17 +19,13 @@ def count_stock_items():
     User can not enter either a quanity higher than this or zero
     """
     print("Welcome to the stock control system.\n")
-    print("The current number of stock items are:\n")
-    stock = SHEET.worksheet("stock").col_values(1)
-    print(len(stock)-1)
-    print("Enter the number of stock items that you'd like for your cycle count.\n")
-    print("The number has to be equal to or lower than current stock quantity above:\n")
+    
+    stock = len(SHEET.worksheet("stock").col_values(1))-1
 
-    count_qty = input("Please enter the number of stock items required for the cycle count:")
+    if stock > 0:
+        print(f"The current quantity of stock items is: {stock}")
 
-    print(count_qty)
-
-    print("********************************************\n")
+    return stock
 
 
 def get_cycle_count_qty():
@@ -38,9 +34,15 @@ def get_cycle_count_qty():
     The number has to be greater than zero and equal to or less than 
     the quanity of stock items currently held
     """
-    print
+    print("Please enter the number of stock items for you cycle count.")
+    print("Quanity should be less than the current quantity of stock items")
 
+    stock_items_to_count = input("Enter quanity here:\n")
 
+    print(stock_items_to_count)
+
+    
+33
 
 
 def main():
@@ -48,6 +50,7 @@ def main():
     Run all functions
     """
     count_stock_items()
+    get_cycle_count_qty()
 
 
 
