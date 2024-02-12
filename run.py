@@ -33,39 +33,18 @@ def get_cycle_count_qty():
     The number has to be greater than zero and equal to or less than 
     the quanity of stock items currently held
     """
-    print("Please enter the number of stock items for your cycle count.")
-    print("Quanity should be less than the current quantity of stock items")
+    while True:
+        try:
+            print("Please enter the number of stock items for your cycle count.")
+            print("Quanity should be less than the current quantity of stock items")
 
-    stock_items_to_count = input("Enter quantity here: ")
-    stock_items_to_count = int(stock_items_to_count)
-
-    
+            stock_items_to_count = input("Enter quantity here: ")
+            stock_items_to_count = int(stock_items_to_count)
+            break
+        except ValueError:
+            print("That is not a valid number")
+        
     return (stock_items_to_count)
-
-
-def validate_input_data():
-    """
-    Checks to see that the user inputs a number that is lower than
-    the quantity of stock items
-    """
-    quantity_items = int(count_stock_items())
-    quantity_entered = int(get_cycle_count_qty())
-
-    try:
-        if quantity_entered !< quantity_items:
-            raise ValuerError(
-            f"You have entered {quantity_entered}")
-    
-    except ValueError as e:
-        print(f"INVALID: {e}, please enter a valid number")
-        return False
-
-    return True
-
-
-
-
-
 
 
 def main():
