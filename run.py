@@ -46,6 +46,11 @@ def get_cycle_count_qty():
         
     return (stock_items_to_count)
 
+def all_line_items():
+    my_items = SHEET.worksheet("stock").row_values(2)
+    SHEET.worksheet("stock").update('F2', 200)
+    print(my_items)
+
 
 def main():
     """ 
@@ -53,7 +58,7 @@ def main():
     """
     count_stock_items()
     get_cycle_count_qty()
-
+    all_line_items()
 
 
 main()
