@@ -22,8 +22,7 @@ def count_stock_items():
     
     stock = len(SHEET.worksheet("stock").col_values(1))-1
 
-    if stock > 0:
-        print(f"The current quantity of stock items is: {stock}\n")
+    print(f"The current quantity of stock items is: {stock}\n")
 
     return stock
 
@@ -34,28 +33,36 @@ def get_cycle_count_qty():
     The number has to be greater than zero and equal to or less than 
     the quanity of stock items currently held
     """
-    print("Please enter the number of stock items for you cycle count.")
+    print("Please enter the number of stock items for your cycle count.")
     print("Quanity should be less than the current quantity of stock items")
-
-    current_qty = count_stock_items()
 
     stock_items_to_count = input("Enter quantity here: ")
     stock_items_to_count = int(stock_items_to_count)
-    
-    if stock_items_to_count >= current_qty:
-        f"Your entry {stock_items_to_count} is higher than the current quantity of items currently in stock"
 
+    
     return (stock_items_to_count)
 
 
-# def valid_quantity(qty):
-#     """
-#     Check to see if user input is less than quantity of items 
-#     currently in stock
-#     """
-#     try:
-#         if qty != get_cycle_count_qty():
-#             f
+def validate_input_data():
+    """
+    Checks to see that the user inputs a number that is lower than
+    the quantity of stock items
+    """
+    quantity_items = int(count_stock_items())
+    quantity_entered = int(get_cycle_count_qty())
+
+    try:
+        if quantity_entered !< quantity_items:
+            raise ValuerError(
+            f"You have entered {quantity_entered}")
+    
+    except ValueError as e:
+        print(f"INVALID: {e}, please enter a valid number")
+        return False
+
+    return True
+
+
 
 
 
