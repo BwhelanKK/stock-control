@@ -48,8 +48,22 @@ def get_cycle_count_qty():
 
 def all_line_items():
     my_items = SHEET.worksheet("stock").row_values(2)
-    SHEET.worksheet("stock").update('F2', 200)
+    # SHEET.worksheet("stock").update('F2', 200)
     print(my_items)
+
+def all_items():
+    all_stock = SHEET.worksheet("stock").get_all_values()
+
+    # for inner in all_stock:
+    #     for detail in inner:
+
+    #         print(detail, end=" ")
+    #     print()
+
+    for i in range(len(all_stock)):
+        for j in range(len(all_stock[i])):
+            print(all_stock[i][j], end=" ")
+        print()
 
 
 def main():
@@ -61,4 +75,5 @@ def main():
     all_line_items()
 
 
-main()
+# main()
+all_items()
