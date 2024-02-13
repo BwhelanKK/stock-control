@@ -62,6 +62,8 @@ def all_items():
 
     for i in range(len(all_stock)):
         for j in range(len(all_stock[i])):
+            if i == 0:
+                continue
             print(all_stock[i][j], end=" ")
         print()
 
