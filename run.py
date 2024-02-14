@@ -35,37 +35,28 @@ def get_cycle_count_qty():
     """
     while True:
         try:
-            print("Please enter the number of stock items for your cycle count.")
-            print("Quanity should be less than the current quantity of stock items")
-
-            stock_items_to_count = input("Enter quantity here: ")
-            stock_items_to_count = int(stock_items_to_count)
+            # print("Please enter the number of stock items for your cycle count.")
+            # print("Quantity should be less than the current quantity of stock items")
+        
+            stock_items_to_count = int(input("Enter quantity of stock items to check here: "))
             break
         except ValueError:
             print("That is not a valid number")
         
-    return (stock_items_to_count)
+    return stock_items_to_count
+        
+
 
 def all_line_items():
-    my_items = SHEET.worksheet("stock").row_values(2)
-    # SHEET.worksheet("stock").update('F2', 200)
-    print(my_items)
+    """
+    Retrieves the user input
+    """
+    user_input = get_cycle_count_qty()
+    print(f"{user_input} confirmed for this cycle count")
+    
+    return (user_input)
 
-def all_items():
-    all_stock = SHEET.worksheet("stock").get_all_values()
-
-    # for inner in all_stock:
-    #     for detail in inner:
-
-    #         print(detail, end=" ")
-    #     print()
-
-    for i in range(len(all_stock)):
-        for j in range(len(all_stock[i])):
-            if i == 0:
-                continue
-            print(all_stock[i][j], end=" ")
-        print()
+ 
 
 
 def main():
@@ -73,9 +64,11 @@ def main():
     Run all functions
     """
     count_stock_items()
-    get_cycle_count_qty()
     all_line_items()
+    
+
+main()
 
 
-# main()
-all_items()
+
+
