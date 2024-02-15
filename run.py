@@ -51,14 +51,19 @@ def all_line_items():
     user_input = get_cycle_count_qty()
     print(f"{user_input} confirmed for this cycle count")
     
-    return (user_input)
+    return (user_input) + 1
 
-def all_items():
 
-     x = all_line_items()
-     i = 1
-     while i <= x:
+def line_items_to_count():
+    """
+    Retrieves the number of line items the user entered as a list
+    """
+    x = all_line_items()
+    i = 2
+    while i <= x:
         my_items = SHEET.worksheet("stock").row_values(i)
+        if i == 0:
+            break
         i += 1
         print(my_items)
 
@@ -73,7 +78,7 @@ def main():
     """
     count_stock_items()
     all_line_items()
-    all_items()
+    line_items_to_count()
     
 
 main()
