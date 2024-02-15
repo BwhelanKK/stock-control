@@ -65,7 +65,18 @@ def line_items_to_count():
         if i == 0:
             break
         i += 1
-        print(my_items)
+        return my_items
+
+def update_stock_to_count_sheet(info):
+    """
+    Updates stock_to_count sheet with user selected range of items
+    to be cycle counted
+    """
+    print("The stock to count sheet is being populated.....\n")
+    count_worksheet = SHEET.worksheet("stock_to_count")
+    count_worksheet.append_row(info)
+    print("Stock to count sheet has been successfully updated.\n")
+    
 
 
 
@@ -79,6 +90,8 @@ def main():
     count_stock_items()
     all_line_items()
     line_items_to_count()
+    info = line_items_to_count()
+    update_stock_to_count_sheet(info)
     
 
 main()
