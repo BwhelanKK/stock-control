@@ -1,5 +1,6 @@
 import gspread
 from google.oauth2.service_account import Credentials
+from pprint import pprint
 
 SCOPE = [
     "https://www.googleapis.com/auth/spreadsheets",
@@ -79,10 +80,7 @@ def update_stock_to_count_sheet(info):
     
 
 
-
- 
-
-
+        
 def main():
     """ 
     Run all functions
@@ -95,6 +93,7 @@ def main():
     
 
 main()
+
 
 
 
