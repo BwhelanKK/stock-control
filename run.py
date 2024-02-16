@@ -27,6 +27,14 @@ def count_stock_items():
 
     return stock
 
+def get_all_values():
+    """
+    retreives all values in 'stock' worksheet
+    """
+    rows = SHEET.worksheet("stock").get_all_values()
+
+    return rows
+
 
 def get_cycle_count_qty():
     """
@@ -44,29 +52,20 @@ def get_cycle_count_qty():
     return stock_items_to_count
         
 
-
-def all_line_items():
-    """
-    Retrieves the user input
-    """
-    user_input = get_cycle_count_qty()
-    print(f"{user_input} confirmed for this cycle count")
-    
-    return (user_input) + 1
-
-
 def line_items_to_count():
     """
     Retrieves the number of line items the user entered as a list
     """
-    x = all_line_items()
+    x = get_cycle_count_qty()# number of line items to be added to count list
     i = 2
     while i <= x:
         my_items = SHEET.worksheet("stock").row_values(i)
+        my_items.append_row()
         if i == 0:
             break
         i += 1
-        return my_items
+    print(my_items)
+
 
 def update_stock_to_count_sheet(info):
     """
@@ -77,22 +76,24 @@ def update_stock_to_count_sheet(info):
     count_worksheet = SHEET.worksheet("stock_to_count")
     count_worksheet.append_row(info)
     print("Stock to count sheet has been successfully updated.\n")
-    
 
+ 
 
-        
 def main():
     """ 
     Run all functions
     """
+    
     count_stock_items()
-    all_line_items()
     line_items_to_count()
     info = line_items_to_count()
     update_stock_to_count_sheet(info)
     
 
-main()
+# main()
+line_items_to_count()
+
+
 
 
 
