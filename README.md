@@ -1,4 +1,5 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+
+![Hereku image](https://github.com/BwhelanKK/stock-control/assets/44683806/0f393272-de33-48b7-9644-c46322a1a896)
 
 Welcome,
 
