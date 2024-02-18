@@ -1,4 +1,7 @@
-## Stock Control - Cycle Count List
+# Stock Control - Cycle Count List
+
+The stock Control - Cycle Count List is a small module in a Stock Management System that generates a cycle count list.  A cycle count is a quanity check on a selected amount of stock items.  The cycle count can be a random check to ensure that stockroom operations are being undertaken accurately.  Any variations have to be noted and investigated.  This module asks a user to input the items to be counted.  The stock item is then appnded to a googlesheet worksheet 'stock_to_count'. 
+
 ![Hereku image](https://github.com/BwhelanKK/stock-control/assets/44683806/0f393272-de33-48b7-9644-c46322a1a896)
 
 Welcome,
