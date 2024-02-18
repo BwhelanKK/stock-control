@@ -26,13 +26,6 @@ def count_stock_items():
 
     return stock
 
-# def get_all_values():
-#     """
-#     retreives all values in 'stock' worksheet
-#     """
-#     rows = SHEET.worksheet("stock").get_all_values()
-
-#     return rows
 
 def get_cycle_count_qty():
     """
@@ -40,7 +33,7 @@ def get_cycle_count_qty():
     """
     while True:
         try:
-            stock_items_to_count = int(input("Enter quantity of stock items to check here: "))
+            stock_items_to_count = int(input("Enter quantity of stock items to check here:\n "))
             break
         except ValueError:
             Print("That is not a valid number")
