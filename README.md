@@ -26,37 +26,29 @@ The selection is thenm copied over to the 'stock-to-count' worksheet that the us
 
 ![sotck items to count](https://github.com/BwhelanKK/stock-control/assets/44683806/9f31aa6e-7bb4-4434-b5f6-d395ba11068a)
 
-#Features Left to Implement
+## Features Left to Implement
  I would like to have the following features:
  - When the user inputs the quantity, the app will capture the line items using the randomint() method.
  - The list for items to be counted wouldn't have current stock values displayed.
- - When the physical count has bee completed, the user inputs the quantity counted.  This value is then compared to the current stock value and the variation, if any, is calculated. 
+ - When the physical count has bee completed, the user inputs the quantity counted.  This value is then compared to the current stock value and the variation, if any, is calculated.
+
+## Unfixed Bugs
+ - The app asks the user twice to enter the quantity for items to be counted.
+ - The number entered by the user is teh index of teh item in the list.  This is not how I wanted this to work.  The number entered was to be used as the number of iterations in a while loop to select the line items and place them in the 'stock_to_count' worksheet.
+
+## Deplyment
+- This was deployed with Heroku.  The live links are:
+  -  Heroku: https://stock-control-cycle-count-1c1d4bfb310f.herokuapp.com/
+  -  Github: https://github.com/BwhelanKK/stock-control.git
+  -  googlehseets: https://docs.google.com/spreadsheets/d/1N0MxCKR1aa3Bm-LRqRPR20_ECRRxNN2-6_hCql6jVlM/edit#gid=1538997195
+ 
+## Credits:
+ - I used the 'love-sandwiches' codealong to help with some of teh gspread function exampls.
+ - gspread documentation
 
 
 
 
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
 
-## Creating the Heroku app
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
