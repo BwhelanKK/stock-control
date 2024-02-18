@@ -4,15 +4,19 @@ The stock Control - Cycle Count List is a small module in a Stock Management Sys
 
 ![Hereku image](https://github.com/BwhelanKK/stock-control/assets/44683806/0f393272-de33-48b7-9644-c46322a1a896)
 
-# Design & Technologies used:
+## Design & Technologies used:
 As this is a Python back end program, thre is no HTML or CSS.
-- Project was coded in Python
+- The project was coded in Python
 - googlesheets spreadsheets was used to store the stock line itens as a list
 - gspread was utilised for getting and setting data in teh google worksheet
 - Heroku was used to deploy the app
 
 
-## Reminders
+## How Stock Control - Cycle Count List is used
+The user is oresented by a simple input screen where they are prompted to enter stock items to be added to the cycle count list:
+![Heroku welcome screen](https://github.com/BwhelanKK/stock-control/assets/44683806/d2493d03-6fb4-4af5-8b5f-6213b3b743b6)
+
+
 
 - Your code must be placed in the `run.py` file
 - Your dependencies must be placed in the `requirements.txt` file
