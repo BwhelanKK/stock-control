@@ -38,16 +38,17 @@ def count_stock_items():
 def get_cycle_count_qty():
     """
     Get the number of items for cycle counting from the user
-    The number has to be greater than zero and equal to or less than
-    the quanity of stock items currently held
     """
     while True:
         try:
             stock_items_to_count = int(input("Enter quantity of stock items to check here: "))
             break
         except ValueError:
-            print("That is not a valid number")
+            Print("That is not a valid number")
+    
     return stock_items_to_count
+
+
 def line_items_to_count():
     """
     Retrieves the number of line items the user entered as a list
