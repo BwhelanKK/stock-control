@@ -16,6 +16,14 @@ As this is a Python back end program, thre is no HTML or CSS.
 The user is oresented by a simple input screen where they are prompted to enter stock items to be added to the cycle count list:
 ![Heroku welcome screen](https://github.com/BwhelanKK/stock-control/assets/44683806/d2493d03-6fb4-4af5-8b5f-6213b3b743b6)
 
+The items selected will be selected from the 'stock' worksheet:
+![current stock levels](https://github.com/BwhelanKK/stock-control/assets/44683806/0935a31a-5d35-496f-aefe-4895216273e3)
+
+The selection is thenm copied over to the 'stock-to-count' worksheet that the user will print off and undertake a physical count:
+![sotck items to count](https://github.com/BwhelanKK/stock-control/assets/44683806/9f31aa6e-7bb4-4434-b5f6-d395ba11068a)
+
+
+
 
 
 - Your code must be placed in the `run.py` file
