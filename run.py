@@ -36,7 +36,7 @@ def get_cycle_count_qty():
             stock_items_to_count = int(input("Enter quantity of stock items to check here:\n "))
             break
         except ValueError:
-            Print("That is not a valid number")
+            print("That is not a valid number")
     
     return stock_items_to_count
 
